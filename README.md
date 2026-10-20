@@ -8,7 +8,7 @@ An ESP32 meter that measures RMS voltage and current of an AC load with EmonLib,
 
 `voltage_and_current.ino` measurement and LCD · `sendDataon.ino` / `sendDataoff.ino` cloud reporting
 
-Set your Wi-Fi credentials and IFTTT key before flashing.
+Before flashing, copy `secrets.h.example` to `secrets.h` and fill in your Wi-Fi name, password and IFTTT key; `secrets.h` is git-ignored.
 
 ## Related
 

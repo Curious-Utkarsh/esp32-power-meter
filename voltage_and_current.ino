@@ -2,14 +2,15 @@
 #include <LiquidCrystal_I2C.h>
 #include <WiFi.h>
 #include <HTTPClient.h>
+#include "secrets.h"  // copy secrets.h.example to secrets.h and fill in your values
 
-const char * ssid = "powerMeter";
-const char * password = "powerMeter2023";
+const char * ssid = WIFI_SSID;
+const char * password = WIFI_PASSWORD;
 
 String server = "http://maker.ifttt.com";
 String eventName = "powerMeter";
-String IFTTT_Key = "3GqyNyUZdnuDiXl7UYrLQP3V41fMDXwysEuNDAm7BR";
-String IFTTTUrl="http://maker.ifttt.com/trigger/powerMeter/with/key/3GqyNyUZdnuDiXl7UYrLQP3V41fMDXwysEuNDAm7BR";
+String IFTTT_Key = IFTTT_KEY;
+String IFTTTUrl="http://maker.ifttt.com/trigger/powerMeter/with/key/" IFTTT_KEY;
 
 LiquidCrystal_I2C lcd(0x27,16,2);
 
